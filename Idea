@@ -1,1 +1,17 @@
 
+Problem Statement:
+A teacher wants to send assignment to students of a class and students should be able to upload assignment solution . Teacher should able to see all the submissions ,send  marks and remarks to students accordingly. 
+
+Solution:
+A web app with two signup screens i.e student screen and teacher screen . Student can signup with the following details as Name,CollegeId,CollegeName,BranchName,Semester,Email,Password.
+Teacher can signup with the following details as Name,CollegeName,Email,Password.After through the respective login, teacher has an option to create assignment which asks for the details 
+of BranchName,semester,assignment file, deadline.After creating assignment , all the students of selected class will receive the assignment and its deadline in their assignments
+screen.Student can upload their answer sheet .Teacher can view all the answer sheets with intime , late submissions  and assign marks ,remarks to each of the student. Student will
+be able to see his marks and remarks.
+
+Features:
+1.Signup and login screens with authentication.
+2.Create ,upload assigment and  after on submissions of answer sheets assigning marks, adding remarks to students 
+3.upload answer sheet and view marks, remarks of student.
+4.profile page of student and teacher.
+5.Forgot password, logout.
