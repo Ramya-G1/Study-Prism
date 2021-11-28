@@ -33,7 +33,7 @@ return (
                                 </h5>
                                 <div className="card-Content" style={{paddingLeft:"10px",paddingBottom:"10px"}}>
                                     {state && item.submissions && item.submissions.find(item=>item.postedBy===state['payload']._id) && <div style={{color:"green",fontWeight:"bold"}}>Assignment submitted</div>}
-                                    <div>Deadline : {(new Date(item.deadline).toString()).split(":00 GMT")[0]}</div>
+                                    <div>Deadline : {(new Date(Date.parse(item.deadline)).toUTCString()).split(" GMT")[0]}</div>
                                 </div>
                             </div>
                             <button  className="btn waves-effect waves-light btn-small submitButton" onClick={()=>openAssignment(item)}  style={{backgroundColor:"royalblue",marginBottom:"20px"}}>Open Assignment
