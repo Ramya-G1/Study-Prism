@@ -87,7 +87,7 @@ return (
                         <div className="card-Content" style={{paddingLeft:"10px",paddingBottom:"10px"}}>
                         <h6  style={{paddingTop:"10px",paddingBottom:"10px"}}>Assigned to {item.branchName} branch ,{item.semester}th semester
                         </h6>
-                        {<div style={{ display: "flex",marginBottom:"15x"}}><i class="material-icons" onClick={()=>editmarks(item._id)}>edit</i><div>Deadline : {(new Date(item.deadline).toString()).split(":00 GMT")[0]}</div></div>}
+                        {<div style={{ display: "flex",marginBottom:"15x"}}><i class="material-icons" onClick={()=>editmarks(item._id)}>edit</i><div>Deadline : {(new Date(Date.parse(item.deadline)).toUTCString()).split(" GMT")[0]}</div></div>}
                         {editdeadline==item._id && <div style={{ display: "flex",marginBottom:"20px",paddingRight:"10px"}}>
                          <div style={{paddingTop:"10px",paddingRight:"10px"}}></div>
                             <input type="date" 
