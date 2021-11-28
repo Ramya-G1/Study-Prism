@@ -135,7 +135,7 @@ return(
                     <div className="row">
                         <div className="col m6 s9">
                             <h1 className="submissionTitle card-title">{data.subjectCode} Assignment </h1>
-                            <div>Deadline : {(new Date(data.deadline).toString()).split(":00 GMT")[0]}</div>
+                            <div>Deadline :{(new Date(Date.parse(data.deadline)).toUTCString()).split(" GMT")[0]}</div>
                             <div>
                                 <a href={data.assignmentUrl} target="_blank" rel="noopener noreferrer">
                                     <button  className="btn waves-effect waves-light btn-small submitButton " style={{backgroundColor:"royalblue",marginLeft:"auto",marginTop:"20px"}} >View Assignment
@@ -149,7 +149,7 @@ return(
                                 <div>
                                     <span class="card-title " style={{paddingLeft:"10px",paddingTop:"10px",borderBottom:"1px solid black"}}>Your work</span>
                                     <div> Assignment submitted</div>
-                                    { data.deadline && (new Date(data.deadline)).getTime()<Date.now() 
+                                    { data.deadline && ((new Date(data.deadline)).getTime()-19800000)<Date.now() 
                                         ? <div>{data.submissions.map(submission=>{
                                             return(
                                                 <>
@@ -166,7 +166,7 @@ return(
                                 </div>
                             :
                                 <div>
-                                    {data.deadline &&  (new Date(data.deadline)).getTime()<Date.now()
+                                    {data.deadline &&  ((new Date(data.deadline)).getTime()-19800000)<Date.now() 
                                     ?
                                     <div>
                                         <span class="card-title " style={{paddingLeft:"10px",paddingTop:"10px",borderBottom:"1px solid black"}}>Your work</span>
